@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fields Builder® — Turnkey Sports Projects & Artificial Grass</title>
+    <meta name="description"
+        content="Fields Builder designs, manufactures and builds turnkey sports facilities worldwide. Artificial turf, stadiums, padel courts, athletics tracks and more across 90+ countries.">
+    <meta name="keywords"
+        content="sports facilities, artificial turf, stadiums, padel courts, turnkey sports projects, athletic tracks, swimming pools">
+    <meta name="author" content="Fields Builder">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fields Builder® — Turnkey Sports Projects & Artificial Grass">
+    <meta property="og:description"
+        content="Leading brand in turnkey sports facilities for over 25 years across 90+ countries.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.fieldsbuilder.com/">
+    <meta property="og:image" content="assets/images/hero-stadium.png">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+
+    <!-- Critical CSS (inline above-the-fold) -->
+    <style>
+        /* ---------- Critical CSS: above-the-fold ---------- */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        :root {
+            --c-primary: #96C11F;
+            --c-primary-dark: #7da31a;
+            --c-navy: #1a2238;
+            --c-dark: #111827;
+            --c-white: #fff;
+            --c-light: #f3f4f6;
+            --c-gray: #6b7280;
+            --c-border: #e5e7eb;
+            --ff: 'Poppins', sans-serif;
+            --header-h: 80px;
+            --transition: .35s cubic-bezier(.4, 0, .2, 1)
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px
+        }
+
+        body {
+            font-family: var(--ff);
+            color: var(--c-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: var(--c-white)
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition)
+        }
+
+        ul,
+        ol {
+            list-style: none
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem
+        }
+
+        /* Header critical */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background var(--transition), box-shadow var(--transition);
+            height: var(--header-h);
+            display: flex;
+            align-items: center;
+            background: transparent
+        }
+
+        .header--scrolled {
+            background: rgba(26, 34, 56, .97);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, .15)
+        }
+
+        .header__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem
+        }
+
+        .header__logo img {
+            height: 45px;
+            width: auto
+        }
+
+        .header__logo span {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--c-white);
+            letter-spacing: -0.5px
+        }
+
+        .header__logo .logo-accent {
+            color: var(--c-primary)
+        }
+
+        /* Hero critical  */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            min-height: 600px;
+            overflow: hidden;
+            background: var(--c-navy)
+        }
+
+        .hero__slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity .8s ease;
+            display: flex;
+            align-items: center
+        }
+
+        .hero__slide.active {
+            opacity: 1;
+            z-index: 1
+        }
+
+        .hero__slide-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(.45)
+        }
+
+        .hero__content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            padding: 0 2rem
+        }
+
+        .hero__label {
+            display: inline-block;
+            color: var(--c-primary);
+            font-size: .85rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: .75rem
+        }
+
+        .hero__title {
+            color: var(--c-white);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1rem
+        }
+
+        .hero__subtitle {
+            color: rgba(255, 255, 255, .85);
+            font-size: clamp(.95rem, 2vw, 1.15rem);
+            margin-bottom: 2rem;
+            max-width: 550px
+        }
+    </style>
+
+    <!-- Main CSS (deferred) -->
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Fields Builder",
+        "url": "https://www.fieldsbuilder.com",
+        "logo": "https://www.fieldsbuilder.com/logo.png",
+        "description": "Turnkey sports facility construction and artificial turf manufacturer with projects in over 90 countries.",
+        "foundingDate": "2000",
+        "areaServed": "Worldwide",
+        "sameAs": [
+            "https://www.instagram.com/fieldsbuilder",
+            "https://www.facebook.com/fieldsbuilder",
+            "https://www.linkedin.com/company/fields-builder"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+90-212-678-1313",
+            "contactType": "customer service",
+            "areaServed": "Worldwide"
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+     START: header.php
+     ============================================================ -->
+    <header class="header" id="header" role="banner">
+        <div class="header__inner">
+            <!-- Logo -->
+            <a href="/" class="header__logo" aria-label="Fields Builder Home">
+                <span>FIELDS<span class="logo-accent">BUILDER</span></span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="header__nav" id="mainNav" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item nav__item--mega">
+                        <a href="#facilities" class="nav__link" aria-haspopup="true" aria-expanded="false">
+                            Sports Facilities <i class="fas fa-chevron-down nav__arrow"></i>
+                        </a>
+                        <div class="mega-menu">
+                            <div class="container mega-menu__inner">
+                                <div class="mega-menu__cols">
+                                    <ul class="mega-menu__list">
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/facility-stadium.png">Stadiums</a></li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/facility-swimming.png">Indoor Sports Halls</a>
+                                        </li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/hero-padel.png">Padel Courts</a></li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/hero-olympic.png">Pickleball Courts</a></li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/hero-stadium.png">Steel Grandstand</a></li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/facility-swimming.png">Handball Courts</a>
+                                        </li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/hero-olympic.png">Baseball Fields</a></li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/hero-stadium.png">Futsal Courts</a></li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/hero-padel.png">Indoor Mat Sports</a></li>
+                                    </ul>
+                                    <ul class="mega-menu__list">
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/hero-olympic.png">Olympic Sports City</a></li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/hero-stadium.png">Football Fields</a></li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/hero-padel.png">Padel Clubs</a></li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/facility-swimming.png">Tennis Courts</a></li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/hero-stadium.png">Basketball Courts</a></li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/hero-olympic.png">Multi-Purpose Fields</a>
+                                        </li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/hero-stadium.png">Rugby Fields</a></li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/hero-padel.png">Cricket Fields</a></li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/facility-swimming.png">Racecourses</a></li>
+                                    </ul>
+                                    <ul class="mega-menu__list">
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/facility-swimming.png">Swimming Pools</a></li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/hero-olympic.png">Athletics Tracks</a></li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/hero-padel.png">Padbol Courts</a></li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/hero-stadium.png">Squash Courts</a></li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/facility-swimming.png">Volleyball Courts</a>
+                                        </li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/hero-olympic.png">Hockey Fields</a></li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/hero-padel.png">Badminton Courts</a></li>
+                                        <li><a href="#" class="mega-menu__link"
+                                                data-image="assets/images/hero-stadium.png">American Football</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu__image">
+                                    <img src="assets/images/facility-stadium.png" alt="Facility Preview"
+                                        id="megaImageFacilities">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav__item nav__item--mega">
+                        <a href="#products" class="nav__link" aria-haspopup="true" aria-expanded="false">
+                            Products <i class="fas fa-chevron-down nav__arrow"></i>
+                        </a>
+                        <div class="mega-menu">
+                            <div class="container mega-menu__inner">
+                                <div class="mega-menu__cols">
+                                    <div class="mega-menu__col">
+                                        <h4 class="mega-menu__title">Artificial Turf</h4>
+                                        <ul class="mega-menu__list">
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/hero-stadium.png">Super C</a></li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/hero-olympic.png">Super V</a></li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/hero-padel.png">Exclusive</a></li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/hero-stadium.png">Premium</a></li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/hero-olympic.png">Monoturf</a></li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/facility-swimming.png">PowerGrass</a></li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/hero-stadium.png">DuoGrass</a></li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/hero-olympic.png">Non-Infill</a></li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/hero-padel.png">Padel Turf</a></li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/hero-stadium.png">Tennis Grass</a></li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/hero-olympic.png">Golf Grass</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu__col">
+                                        <h4 class="mega-menu__title">Sports Flooring</h4>
+                                        <ul class="mega-menu__list">
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/hero-stadium.png">Tartan Surface</a></li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/hero-olympic.png">Sandwich System</a></li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/facility-swimming.png">Spray Coating
+                                                    System</a></li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/hero-stadium.png">Full PU Flooring</a>
+                                            </li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/hero-padel.png">PU Flooring</a></li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/hero-olympic.png">Sports Parquet</a></li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/facility-swimming.png">Sports PVC</a></li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/hero-padel.png">Acrylic Flooring</a></li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/hero-stadium.png">Modular Rubber
+                                                    Flooring</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu__col">
+                                        <h4 class="mega-menu__title">Complementary Products</h4>
+                                        <ul class="mega-menu__list">
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/hero-stadium.png">Cork</a></li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/hero-olympic.png">SBR</a></li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/hero-padel.png">Drained Shockpad</a></li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/hero-stadium.png">PE Shockpad</a></li>
+                                            <li><a href="#" class="mega-menu__link"
+                                                    data-image="assets/images/facility-swimming.png">Silica Sand</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="mega-menu__image">
+                                    <img src="assets/images/hero-stadium.png" alt="Product Preview"
+                                        id="megaImageProducts">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav__item"><a href="#references" class="nav__link">References</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">News</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header__actions">
+                <div class="lang-dropdown">
+                    <button class="lang-dropdown__btn" aria-haspopup="true" aria-expanded="false">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English"> EN <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown__menu">
+                        <a href="#" class="lang-dropdown__item"><img src="https://flagcdn.com/w20/gb.png" alt="English">
+                            EN</a>
+                        <a href="#" class="lang-dropdown__item"><img src="https://flagcdn.com/w20/tr.png" alt="Turkish">
+                            TR</a>
+                        <a href="#" class="lang-dropdown__item"><img src="https://flagcdn.com/w20/fr.png" alt="French">
+                            FR</a>
+                        <a href="#" class="lang-dropdown__item"><img src="https://flagcdn.com/w20/qa.png" alt="Arabic">
+                            AR</a>
+                    </div>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-nav" id="mobileNav" role="navigation" aria-label="Mobile navigation">
+            <div class="mobile-nav__inner">
+                <ul class="mobile-nav__list">
+                    <li><a href="#about" class="mobile-nav__link">About</a></li>
+                    <li class="mobile-nav__dropdown">
+                        <a href="#facilities" class="mobile-nav__link mobile-nav__link--toggle">
+                            Sports Facilities <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="mobile-nav__sub">
+                            <li><a href="#">Stadiums</a></li>
+                            <li><a href="#">Olympic Sports City</a></li>
+                            <li><a href="#">Swimming Pools</a></li>
+                            <li><a href="#">Indoor Sports Halls</a></li>
+                            <li><a href="#">Football Fields</a></li>
+                            <li><a href="#">Athletics Tracks</a></li>
+                            <li><a href="#">Padel Courts</a></li>
+                            <li><a href="#">Tennis Courts</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__dropdown">
+                        <a href="#products" class="mobile-nav__link mobile-nav__link--toggle">
+                            Products <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="mobile-nav__sub">
+                            <li><a href="#">Super C</a></li>
+                            <li><a href="#">Super V</a></li>
+                            <li><a href="#">Exclusive</a></li>
+                            <li><a href="#">Premium</a></li>
+                            <li><a href="#">PowerGrass</a></li>
+                            <li><a href="#">DuoGrass</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#references" class="mobile-nav__link">References</a></li>
+                    <li><a href="#" class="mobile-nav__link">News</a></li>
+                    <li><a href="#contact" class="mobile-nav__link">Contact</a></li>
+                </ul>
+                <a href="#contact" class="btn btn--primary btn--block">Get a Quote</a>
+            </div>
+        </div>
+    </header>
+    <!-- END: header.php -->
+
+
+    <!-- ============================================================
+     START: 404.php
+     ============================================================ -->
+    <main id="main-content">
+        <section class="not-found d-flex align-items-center">
+            <div class="not-found__bg"></div>
+            <div class="container not-found__content text-center fade-up-element in-view">
+                <div class="not-found__animate-elem">
+                    <h1 class="not-found__code">4<span>0</span>4</h1>
+                </div>
+                <h2 class="not-found__title">Oops! Page Not Found</h2>
+                <p class="not-found__desc">We're sorry, but the page you were looking for doesn't exist, has been removed, or is temporarily unavailable.</p>
+                <a href="index.html" class="btn btn--primary btn--lg not-found__btn">
+                    <i class="fas fa-home"></i> Back to Homepage
+                </a>
+            </div>
+        </section>
+    </main>
+    <!-- END: 404.php -->
+
+
+    <!-- ============================================================
+     START: footer.php
+     ============================================================ -->
+    <footer class="footer" id="contact" role="contentinfo">
+        <div class="container">
+            <div class="footer__top">
+                <!-- Column 1: Brand -->
+                <div class="footer__col footer__col--brand">
+                    <a href="/" class="footer__logo" aria-label="Fields Builder Home">
+                        <span>FIELDS<span class="logo-accent">BUILDER</span></span>
+                    </a>
+                    <p class="footer__brand-text">Fields Builder is the leading brand of Fields Builder Group, specializing in
+                        turnkey sports facilities for over 25 years across 90+ countries worldwide.</p>
+                    <div class="footer__socials">
+                        <a href="https://www.instagram.com/fieldsbuilder" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/fieldsbuilder" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/company/fields-builder" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/@fieldsbuilder" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Facilities -->
+                <div class="footer__col">
+                    <h3 class="footer__heading">Sports Facilities</h3>
+                    <ul class="footer__links">
+                        <li><a href="#">Stadiums</a></li>
+                        <li><a href="#">Olympic Sports City</a></li>
+                        <li><a href="#">Swimming Pools</a></li>
+                        <li><a href="#">Indoor Sports Halls</a></li>
+                        <li><a href="#">Football Fields</a></li>
+                        <li><a href="#">Padel Courts</a></li>
+                        <li><a href="#">Athletics Tracks</a></li>
+                        <li><a href="#">Steel Grandstands</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Products -->
+                <div class="footer__col">
+                    <h3 class="footer__heading">Products</h3>
+                    <ul class="footer__links">
+                        <li><a href="#">Super C</a></li>
+                        <li><a href="#">Super V</a></li>
+                        <li><a href="#">Exclusive</a></li>
+                        <li><a href="#">DuoGrass</a></li>
+                        <li><a href="#">Padel Turf</a></li>
+                        <li><a href="#">Hybrid Grass</a></li>
+                        <li><a href="#">Tartan Surface</a></li>
+                        <li><a href="#">Sandwich System</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Company -->
+                <div class="footer__col">
+                    <h3 class="footer__heading">Company</h3>
+                    <ul class="footer__links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Mission & Vision</a></li>
+                        <li><a href="#">Brands</a></li>
+                        <li><a href="#">References</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">GDPR</a></li>
+                        <li><a href="#">Cookies Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Contact -->
+                <div class="footer__col footer__col--contact">
+                    <h3 class="footer__heading">Contact — HQ</h3>
+                    <!-- Office Tabs -->
+                    <div class="footer__office-tabs" role="tablist" aria-label="Office locations">
+                        <button class="footer__office-tab active" role="tab" aria-selected="true"
+                            data-office="turkey">Türkiye</button>
+                        <button class="footer__office-tab" role="tab" aria-selected="false"
+                            data-office="qatar">Qatar</button>
+                        <button class="footer__office-tab" role="tab" aria-selected="false"
+                            data-office="france">France</button>
+                    </div>
+                    <!-- Office Panels -->
+                    <div class="footer__office-panel active" data-panel="turkey">
+                        <p><i class="fas fa-map-marker-alt"></i> Velimese Mah. Baraj Yolu Kume Evler No:7 Ergene –
+                            Tekirdağ / Türkiye</p>
+                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+902126781313">+90 (212) 678 13 13</a></p>
+                        <p><i class="fas fa-envelope"></i> <a
+                                href="mailto:info@fieldsbuilder.com">info@fieldsbuilder.com</a></p>
+                    </div>
+                    <div class="footer__office-panel" data-panel="qatar">
+                        <p><i class="fas fa-map-marker-alt"></i> Shoumoukh Tower, 10th floor, Tower B, C – Ring Road, Al
+                            Sadd Doha, Qatar</p>
+                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+97440075198">+974-4007-5198</a></p>
+                        <p><i class="fas fa-envelope"></i> <a
+                                href="mailto:qatar@fieldsbuilder.com">qatar@fieldsbuilder.com</a></p>
+                    </div>
+                    <div class="footer__office-panel" data-panel="france">
+                        <p><i class="fas fa-map-marker-alt"></i> 12/14, rond-point des Champs Elysées, Paris, 75008,
+                            France</p>
+                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+33153531412">+33 1 53 53 14 12</a></p>
+                        <p><i class="fas fa-envelope"></i> <a
+                                href="mailto:france@fieldsbuilder.com">france@fieldsbuilder.com</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer__bottom">
+                <p>Fields Builder is a Brand of <a href="https://www.fieldsbuildergroup.com/" target="_blank"
+                        rel="noopener noreferrer">Fields Builder Group</a></p>
+                <p>&copy; 2025 <a href="https://fieldsbuilder.com">fieldsbuilder.com</a> | All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- END: footer.php -->
+
+    <!-- ===== FLOATING ACTION BUTTON (FAB) ===== -->
+    <div class="fab-container">
+        <!-- Floating Menu (WhatsApp + Quote) -->
+        <div class="fab-menu">
+            <a href="https://wa.me/1234567890" target="_blank" class="fab-item fab-item--whatsapp" aria-label="Chat on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+                <span class="fab-tooltip">WhatsApp</span>
+            </a>
+            <button class="fab-item fab-item--quote js-open-quote" aria-label="Get a Quote">
+                <i class="fas fa-file-signature"></i>
+                <span class="fab-tooltip">Get a Quote</span>
+            </button>
+        </div>
+        <!-- Main Toggle Button -->
+        <button class="fab-toggle" aria-label="Open contact menu">
+            <i class="fas fa-comment-dots fab-icon-open"></i>
+            <i class="fas fa-times fab-icon-close"></i>
+        </button>
+    </div>
+
+    <!-- ===== QUOTE MODAL ===== -->
+    <div class="quote-modal-overlay js-close-quote"></div>
+    <div class="quote-modal">
+        <button class="quote-modal__close js-close-quote" aria-label="Close modal"><i class="fas fa-times"></i></button>
+        <div class="quote-modal__header">
+            <h3>Get a Quick Quote</h3>
+            <p>Fill out the form below and our team will get back to you shortly.</p>
+        </div>
+        <form class="quote-modal__form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Full Name *" required>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email Address *" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" class="form-control" placeholder="Phone Number *" required>
+            </div>
+            <div class="form-group">
+                <select class="form-control" required>
+                    <option value="" disabled selected>Interested Product/Service *</option>
+                    <option value="artificial-turf">Artificial Turf Systems</option>
+                    <option value="sports-flooring">Sports Flooring</option>
+                    <option value="stadium">Stadium Construction</option>
+                    <option value="equipment">Sports Equipment</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" rows="4" placeholder="Your Message / Project Details"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Submit Request <i class="fas fa-paper-plane"></i></button>
+        </form>
+    </div>
+
+    <!-- jQuery (slim minified) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
