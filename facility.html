@@ -557,64 +557,215 @@
             </div>
 
             <!-- Bottom Wave/Scroll Indicator -->
-            <div class="facility-hero__bottom-shape">
+           <!-- <div class="facility-hero__bottom-shape">
                 <div class="scroll-down-btn" aria-label="Scroll Down">
                     <i class="fas fa-chevron-down"></i>
                     <i class="fas fa-chevron-down"></i>
                 </div>
-            </div>
+            </div> -->
         </section>
 
         <!-- ===== FACILITY DETAILS SECTION ===== -->
-        <section class="facility-details page-spacing">
+        <section class="facility-details">
             <div class="container">
                 <div class="facility-details__grid">
-                    <!-- Slider Column -->
-                    <div class="facility-details__slider-col">
+                    <!-- Left: Slider -->
+                    <div class="facility-details__slider-wrapper">
                         <div class="swiper facility-details-slider">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="facility-details__img">
-                                        <img src="assets/images/facility-stadium.png" alt="Stadium Infrastructure">
-                                    </div>
+                                    <img src="assets/images/hero-stadium.png" alt="Facility Detail 1">
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="facility-details__img">
-                                        <img src="assets/images/hero-stadium.png" alt="Stadium Construction">
-                                    </div>
+                                    <img src="assets/images/hero-olympic.png" alt="Facility Detail 2">
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="facility-details__img">
-                                        <img src="assets/images/facilities-stadiums-slide_1777682269974.png" alt="Stadium Lighting">
-                                    </div>
+                                    <img src="assets/images/hero-padel.png" alt="Facility Detail 3">
                                 </div>
                             </div>
-                            
-                            <!-- Custom Navigation -->
-                            <div class="facility-details__nav">
-                                <button class="details-nav-btn details-prev" aria-label="Previous Slide">
-                                    <i class="fas fa-arrow-left"></i>
-                                </button>
-                                <button class="details-nav-btn details-next" aria-label="Next Slide">
-                                    <i class="fas fa-arrow-right"></i>
-                                </button>
+                        </div>
+                        <!-- Navigation Buttons -->
+                        <div class="details-slider-nav">
+                            <div class="details-nav-btn details-prev"><i class="fas fa-arrow-left"></i></div>
+                            <div class="details-nav-btn details-next"><i class="fas fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Content -->
+                    <div class="facility-details__content">
+                        <p>
+                            With its unique design, high-level atmosphere, and cost-effectiveness, our stadium projects are designed in accordance with FIFA standards; featuring high-quality artificial turf / hybrid grass, professional lighting systems, steel stands, and state-of-the-art LED perimeters, they possess superior quality infrastructure.
+                        </p>
+
+                        <div class="facility-details__list">
+                            <div class="facility-details__item">
+                                <i class="fas fa-check"></i>
+                                <span>Football field in accordance with FIFA standards,</span>
+                            </div>
+                            <div class="facility-details__item">
+                                <i class="fas fa-check"></i>
+                                <span>Athletics track in accordance with World Athletics standards,</span>
+                            </div>
+                            <div class="facility-details__item">
+                                <i class="fas fa-check"></i>
+                                <span>High-strength steel stands with or without a roof,</span>
+                            </div>
+                            <div class="facility-details__item">
+                                <i class="fas fa-check"></i>
+                                <span>128 lighting systems of 2,000 Watts providing top-level game quality and experience,</span>
+                            </div>
+                            <div class="facility-details__item">
+                                <i class="fas fa-check"></i>
+                                <span>High-resolution LED screens and in-field LED perimeters,</span>
+                            </div>
+                            <div class="facility-details__item">
+                                <i class="fas fa-check"></i>
+                                <span>Management offices, café, restaurant areas, changing rooms, fitness and sauna.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== COMPLETED PROJECTS SECTION ===== -->
+        <section class="completed-projects">
+            <div class="container">
+                <div class="projects-header">
+                    <div class="projects-header__title-group">
+                        <span class="section-label" style="text-align: left;">Stadiums</span>
+                        <h2 class="section-title">Completed <strong>Projects</strong></h2>
+                    </div>
+                    <div class="projects-nav">
+                        <button class="projects-nav__btn projects-prev"><i class="fas fa-arrow-left"></i></button>
+                        <button class="projects-nav__btn projects-nav__btn--next projects-next"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="swiper projects-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Project 1 -->
+                        <div class="swiper-slide">
+                            <div class="project-card">
+                                <img src="assets/images/hero-stadium.png" alt="Project Tanzania" class="project-card__img">
+                                <div class="project-card__overlay">
+                                    <div class="project-card__tag">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Tanzania</span>
+                                    </div>
+                                    <h3 class="project-card__title">Tanzania Mini Football Field and Acrylic Fields</h3>
+                                    <p class="project-card__desc">Premium synthetic turf installation for municipal sports centers in Tanzania, featuring high-durability acrylic surfaces.</p>
+                                </div>
+                                <a href="#" class="project-card__link"><i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- Project 2 -->
+                        <div class="swiper-slide">
+                            <div class="project-card">
+                                <img src="assets/images/hero-olympic.png" alt="Project Burkina Faso" class="project-card__img">
+                                <div class="project-card__overlay">
+                                    <div class="project-card__tag">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Burkina Faso</span>
+                                    </div>
+                                    <h3 class="project-card__title">Artificial Turf Modular Fields in Burkina Faso</h3>
+                                    <p class="project-card__desc">As Fields Builder, we have successfully completed two artificial turf modular field projects in Burkina Faso...</p>
+                                </div>
+                                <a href="#" class="project-card__link"><i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- Project 3 -->
+                        <div class="swiper-slide">
+                            <div class="project-card">
+                                <img src="assets/images/hero-padel.png" alt="Project Qatar" class="project-card__img">
+                                <div class="project-card__overlay">
+                                    <div class="project-card__tag">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Qatar</span>
+                                    </div>
+                                    <h3 class="project-card__title">Professional Padel Complex in Doha</h3>
+                                    <p class="project-card__desc">Expansion of existing sports facilities with standard-compliant padel courts and high-efficiency lighting.</p>
+                                </div>
+                                <a href="#" class="project-card__link"><i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FAQ SECTION ===== -->
+        <section class="facility-faq">
+            <div class="container">
+                <div class="faq-header">
+                    <span class="section-label">Integral Spor</span>
+                    <h2 class="section-title">Frequently Asked <strong>Questions</strong></h2>
+                </div>
+
+                <div class="faq-accordion">
+                    <!-- Item 1 -->
+                    <div class="faq-accordion__item active">
+                        <div class="faq-accordion__header">
+                            <h3 class="faq-accordion__question">1. What are FIFA's requirements for a standard stadium?</h3>
+                            <div class="faq-accordion__icon"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-accordion__body">
+                            <div class="faq-accordion__content">
+                                The requirements set by FIFA include that the stadium complies with safety standards, that there are stands of the right size and height, that the football field is of appropriate dimensions and that there is an artificial turf surface to be used in international matches.
                             </div>
                         </div>
                     </div>
 
-                    <!-- Info Column -->
-                    <div class="facility-details__info">
-                        <p class="facility-details__text">
-                            With its unique design, high-level atmosphere, and cost-effectiveness, our stadium projects are designed in accordance with FIFA standards; featuring high-quality artificial turf / hybrid grass, professional lighting systems, steel stands, and state-of-the-art LED perimeters, they possess superior quality infrastructure.
-                        </p>
-                        <ul class="facility-details__checklist">
-                            <li><i class="fas fa-check"></i> Football field in accordance with FIFA standards,</li>
-                            <li><i class="fas fa-check"></i> Athletics track in accordance with World Athletics standards,</li>
-                            <li><i class="fas fa-check"></i> High-strength steel stands with or without a roof,</li>
-                            <li><i class="fas fa-check"></i> 128 lighting systems of 2,000 Watts providing top-level game quality and experience,</li>
-                            <li><i class="fas fa-check"></i> High-resolution LED screens and in-field LED perimeters,</li>
-                            <li><i class="fas fa-check"></i> Management offices, café, restaurant areas, changing rooms, fitness and sauna.</li>
-                        </ul>
+                    <!-- Item 2 -->
+                    <div class="faq-accordion__item">
+                        <div class="faq-accordion__header">
+                            <h3 class="faq-accordion__question">2. What type of artificial turf is typically used in a 30,000 seats stadium?</h3>
+                            <div class="faq-accordion__icon"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-accordion__body">
+                            <div class="faq-accordion__content">
+                                For high-capacity stadiums, we recommend our professional-grade artificial turf or hybrid grass solutions that meet FIFA Quality Pro standards, ensuring durability and optimal ball performance under heavy use.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="faq-accordion__item">
+                        <div class="faq-accordion__header">
+                            <h3 class="faq-accordion__question">3. What are the general dimensions of a 30,000 seats stadium?</h3>
+                            <div class="faq-accordion__icon"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-accordion__body">
+                            <div class="faq-accordion__content">
+                                A typical 30,000-seat stadium occupies approximately 30,000 to 45,000 square meters, depending on the architectural design, integrated facilities, and safety perimeter requirements.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FACILITY CATALOGUE CTA ===== -->
+        <section class="facility-cta">
+            <div class="container">
+                <div class="facility-cta__banner">
+                    <div class="facility-cta__grid">
+                        <div class="facility-cta__img-wrap">
+                            <img src="assets/images/catalogue-mockup.png" alt="E-Catalogue" class="facility-cta__book">
+                        </div>
+                        <div class="facility-cta__content">
+                            <div class="facility-cta__text">
+                                <h3 class="facility-cta__title">
+                                    Request detailed information <br>
+                                    <span class="highlight">about the sports facilities.</span>
+                                </h3>
+                                <p class="facility-cta__desc">You can download our e-Catalogue to learn more about our sports facility projects!</p>
+                            </div>
+                            <a href="#" class="btn-catalogue">
+                                <span>e-Catalogue</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -624,6 +775,7 @@
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 if (typeof Swiper !== 'undefined') {
+                    // MAIN HERO SLIDER
                     const $features = jQuery('.facility-feature');
                     
                     const facilitySwiper = new Swiper('.facility-slider', {
@@ -646,24 +798,42 @@
                         }
                     });
 
-                    // Click to change slide
                     $features.on('click', function() {
                         const index = jQuery(this).data('index');
                         facilitySwiper.slideToLoop(index);
+                        
+                        $features.removeClass('facility-feature--active');
+                        jQuery(this).addClass('facility-feature--active');
                     });
 
-                    // Details Slider
+                    // DETAILS SECTION SLIDER
                     new Swiper('.facility-details-slider', {
                         loop: true,
                         speed: 800,
-                        spaceBetween: 20,
                         navigation: {
                             nextEl: '.details-next',
                             prevEl: '.details-prev',
+                        }
+                    });
+
+                    // COMPLETED PROJECTS SLIDER
+                    new Swiper('.projects-slider', {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                        loop: true,
+                        speed: 1000,
+                        navigation: {
+                            nextEl: '.projects-next',
+                            prevEl: '.projects-prev',
                         },
-                        autoplay: {
-                            delay: 4000,
-                            disableOnInteraction: false,
+                        breakpoints: {
+                            768: {
+                                slidesPerView: 2,
+                            },
+                            1200: {
+                                slidesPerView: 2,
+                                spaceBetween: 40,
+                            }
                         }
                     });
                 }

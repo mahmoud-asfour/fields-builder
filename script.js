@@ -782,7 +782,22 @@ function initScrollAnimations() {
         '.news__slider',
         '.cta__inner > *',
         '.news-archive__bar',
-        '.news-arch-card'
+        '.news-arch-card',
+        '.facility-details__slider-wrapper',
+        '.facility-details__content',
+        '.projects-header',
+        '.projects-slider',
+        '.facility-cta__banner',
+        '.faq-header',
+        '.faq-accordion__item',
+        '.about-hero__content',
+        '.about-company__grid > *',
+        '.about-mv__block',
+        '.about-mv__athlete',
+        '.about-brands__inner',
+        '.reveal-left',
+        '.reveal-right',
+        '.about-circular'
     ];
 
     var $elements = jQuery(animSelectors.join(', '));
