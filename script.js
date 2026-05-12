@@ -791,7 +791,6 @@ function initScrollAnimations() {
         '.faq-header',
         '.faq-accordion__item',
         '.about-hero__content',
-        '.about-company__grid > *',
         '.about-mv__block',
         '.about-mv__athlete',
         '.about-brands__inner',

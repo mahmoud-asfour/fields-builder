@@ -1,0 +1,1 @@
+console.log(" Test if JS runs to make sure I did not introduce a crash in script.js)

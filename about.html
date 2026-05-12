@@ -193,24 +193,76 @@
             </div>
         </section>
 
-        <!-- =====  SECTION 2: COMPANY OVERVIEW  ===== -->
-        <section class="about-company section-padding">
+        <!-- =====  SECTION 2: WHAT WE'RE DOING (Slider + Synced Text)  ===== -->
+        <section class="about-company section-padding" id="what-we-do">
             <div class="container">
-                <div class="about-company__grid">
-                    <div class="about-company__left reveal-left">
-                        <div class="about-company__intro">
-                            With its Türkiye-based production, multinational identity, and <strong>13 brands</strong>, 
-                            <span class="highlight">Integral Spor</span> currently delivers its products and services to 
-                            customers in more than <strong>90 countries</strong>.
+                <div class="about-company__intro-row">
+                    <div class="about-company__intro">
+                        With its Türkiye-based production, multinational identity, and <strong>13 brands</strong>, 
+                        <span class="highlight">Fields Builder</span> currently delivers its products and services to 
+                        customers in more than <strong>90 countries</strong>.
+                    </div>
+                </div>
+
+                <div class="about-company__wrapper">
+                    <!-- LEFT side: Text and UI -->
+                    <div class="about-company__info">
+                        <h4 class="about-company__subtitle">WHAT WE ARE DOING?</h4>
+                        
+                        <!-- Text Slider (Synced) -->
+                        <div class="swiper about-text-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h3 class="about-company__title">We Develop Olympic Sports City Projects</h3>
+                                    <p class="about-company__desc">Olympic Sports City, Fields Builder's most comprehensive project, includes 21 indoor and outdoor sports facilities. We design entire athletic ecosystems that serve communities for generations.</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3 class="about-company__title">We Build FIFA Approved Stadiums!</h3>
+                                    <p class="about-company__desc">We build modern, FIFA-approved stadiums with 10,000, 30,000 and 50,000-person capacity options to meet the needs of today and the future. Every pitch is engineered for peak performance.</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3 class="about-company__title">We Build FIP Approved Padel Clubs</h3>
+                                    <p class="about-company__desc">We build padel clubs with three different concepts tailored to everyone's needs: Padel Club Extreme, Padel Club Impact and Padel Club Essential — delivering world-class padel experiences.</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3 class="about-company__title">We Build Olympic Swimming Pools</h3>
+                                    <p class="about-company__desc">We build Olympic and semi-Olympic swimming pools with durable, functional and modern architecture in a short time of 3 months, setting new benchmarks in aquatic facility design.</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3 class="about-company__title">We Design Indoor Sports Halls!</h3>
+                                    <p class="about-company__desc">We are building modern and high-tech indoor sports halls that can host different branches of sports — from basketball and volleyball to martial arts and gymnastics.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="about-company__text">
-                            <p>Fields Builder was founded with a visionary spirit to set new standards in sports facility construction. Over two decades, we have evolved from a local manufacturer into a global leader, dedicated to providing high-performance turf and turnkey solutions for professional and community sports venues.</p>
-                            <p>Our commitment to excellence is reflected in every pitch we build, whether it's a FIFA-certified stadium or a local community court. We believe that every athlete deserves a field that inspires greatness.</p>
+
+                        <!-- Controls -->
+                        <div class="about-company__controls">
+                            <div class="about-slider-prev"><i class="fas fa-arrow-left"></i></div>
+                            <div class="about-slider-pagination"></div>
+                            <div class="about-slider-next"><i class="fas fa-arrow-right"></i></div>
                         </div>
                     </div>
-                    <div class="about-company__right reveal-right">
-                        <div class="about-company__cutout">
-                            <img src="assets/images/about-player.png" alt="Integral Spor Athlete">
+
+                    <!-- RIGHT side: Images -->
+                    <div class="about-company__visual">
+                        <div class="swiper about-image-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="assets/images/about-slide-olympic.png" alt="Olympic Sports City">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/images/about-slide-stadium.png" alt="FIFA Approved Stadium">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/images/about-slide-padel.png" alt="FIP Approved Padel Club">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/images/facility-swimming.png" alt="Olympic Swimming Pool">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/images/hero-olympic.png" alt="Indoor Sports Hall">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -259,9 +311,9 @@
         <section class="about-mv">
             <div class="about-mv__container">
                 <!-- Athlete Center Image (Direct child of section for absolute positioning) -->
-                <div class="about-mv__athlete reveal-up">
+                <!--<div class="about-mv__athlete reveal-up">
                     <img src="assets/images/about-athlete.png" alt="Action Athlete">
-                </div>
+                </div>-->
 
                 <div class="about-mv__grid">
                     <!-- Mission -->
@@ -455,13 +507,47 @@
     <script src="script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // ===== 1. Text Slider =====
+            var textSlider = new Swiper('.about-text-slider', {
+                speed: 800,
+                effect: 'fade',
+                fadeEffect: { crossFade: true },
+                autoHeight: true,
+                allowTouchMove: false, // Text shouldn't be swipeable directly if synced
+            });
+
+            // ===== 2. Image Slider =====
+            var imageSlider = new Swiper('.about-image-slider', {
+                speed: 800,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                effect: 'fade',
+                fadeEffect: { crossFade: true },
+                pagination: {
+                    el: '.about-slider-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.about-slider-next',
+                    prevEl: '.about-slider-prev',
+                },
+            });
+
+            // ===== 3. Sync them =====
+            textSlider.controller.control = imageSlider;
+            imageSlider.controller.control = textSlider;
+
+            // ===== Brands Slider =====
             new Swiper('.brands-slider', {
                 loop: true,
                 navigation: {
                     nextEl: '.brands-button-next',
                     prevEl: '.brands-button-prev',
                 },
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 30,
             });
         });
