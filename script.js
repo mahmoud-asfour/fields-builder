@@ -1,5 +1,5 @@
 /**
- * Integral Spor — Homepage Interactions
+ * Fields Builder — Homepage Interactions
  * Uses jQuery for DOM manipulation, sliders, and UI interactions.
  * ========================================================================== */
 
