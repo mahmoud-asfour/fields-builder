@@ -507,8 +507,11 @@
     <script src="script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            const isRTL = document.documentElement.dir === 'rtl';
+
             // ===== 1. Text Slider =====
             var textSlider = new Swiper('.about-text-slider', {
+                rtl: isRTL,
                 speed: 800,
                 effect: 'fade',
                 fadeEffect: { crossFade: true },
@@ -518,6 +521,7 @@
 
             // ===== 2. Image Slider =====
             var imageSlider = new Swiper('.about-image-slider', {
+                rtl: isRTL,
                 speed: 800,
                 autoplay: {
                     delay: 5000,
@@ -542,6 +546,7 @@
 
             // ===== Brands Slider =====
             new Swiper('.brands-slider', {
+                rtl: isRTL,
                 loop: true,
                 navigation: {
                     nextEl: '.brands-button-next',

@@ -627,6 +627,70 @@
                 </div>
             </div>
         </section>
+        
+        <!-- ===== NEW FACILITY DETAILS SECTION (REVERSED) ===== -->
+        <section class="facility-details facility-details--reverse">
+            <div class="container">
+                <div class="facility-details__grid">
+                    <!-- Left: Content -->
+                    <div class="facility-details__content">
+                        <h2 class="section-title">Management & <strong>Experience</strong></h2>
+                        <p>
+                            Our stadium projects are not just about the field; they are comprehensive sports hubs. We integrate modern administrative spaces, media centers, and VIP hospitality areas to ensure a world-class experience for both players and spectators.
+                        </p>
+
+                        <div class="facility-details__list">
+                            <div class="facility-details__item">
+                                <i class="fas fa-check"></i>
+                                <span>Digital infrastructure for broadcasting and media,</span>
+                            </div>
+                            <div class="facility-details__item">
+                                <i class="fas fa-check"></i>
+                                <span>Modern locker rooms with hydrotherapy zones,</span>
+                            </div>
+                            <div class="facility-details__item">
+                                <i class="fas fa-check"></i>
+                                <span>VIP lounges and executive boxes with premium views,</span>
+                            </div>
+                            <div class="facility-details__item">
+                                <i class="fas fa-check"></i>
+                                <span>Eco-friendly waste management and water recycling,</span>
+                            </div>
+                            <div class="facility-details__item">
+                                <i class="fas fa-check"></i>
+                                <span>Smart stadium technology for access control and security,</span>
+                            </div>
+                            <div class="facility-details__item">
+                                <i class="fas fa-check"></i>
+                                <span>Integrated retail and F&B outlets for fan engagement.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Slider -->
+                    <div class="facility-details__slider-wrapper">
+                        <div class="swiper facility-details-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="assets/images/hero-stadium.png" alt="Facility Detail 4">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/images/hero-olympic.png" alt="Facility Detail 5">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/images/hero-padel.png" alt="Facility Detail 6">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Navigation Buttons -->
+                        <div class="details-slider-nav">
+                            <div class="details-nav-btn details-prev"><i class="fas fa-arrow-left"></i></div>
+                            <div class="details-nav-btn details-next"><i class="fas fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- ===== COMPLETED PROJECTS SECTION ===== -->
         <section class="completed-projects">
@@ -774,11 +838,14 @@
         <!-- Script for Facility Swiper -->
         <script>
             document.addEventListener('DOMContentLoaded', function() {
+                const isRTL = document.documentElement.dir === 'rtl';
+
                 if (typeof Swiper !== 'undefined') {
                     // MAIN HERO SLIDER
                     const $features = jQuery('.facility-feature');
                     
                     const facilitySwiper = new Swiper('.facility-slider', {
+                        rtl: isRTL,
                         loop: true,
                         speed: 1200,
                         effect: 'fade',
@@ -806,18 +873,27 @@
                         jQuery(this).addClass('facility-feature--active');
                     });
 
-                    // DETAILS SECTION SLIDER
-                    new Swiper('.facility-details-slider', {
-                        loop: true,
-                        speed: 800,
-                        navigation: {
-                            nextEl: '.details-next',
-                            prevEl: '.details-prev',
-                        }
+                    // DETAILS SECTION SLIDERS (Multi-instance support)
+                    jQuery('.facility-details').each(function() {
+                        const $section = jQuery(this);
+                        const $swiper = $section.find('.facility-details-slider')[0];
+                        const $next = $section.find('.details-next')[0];
+                        const $prev = $section.find('.details-prev')[0];
+                        
+                        new Swiper($swiper, {
+                            rtl: isRTL,
+                            loop: true,
+                            speed: 800,
+                            navigation: {
+                                nextEl: $next,
+                                prevEl: $prev,
+                            }
+                        });
                     });
 
                     // COMPLETED PROJECTS SLIDER
                     new Swiper('.projects-slider', {
+                        rtl: isRTL,
                         slidesPerView: 1,
                         spaceBetween: 30,
                         loop: true,
